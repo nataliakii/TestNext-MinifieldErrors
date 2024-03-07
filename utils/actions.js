@@ -23,12 +23,12 @@ export const fetchMenu = async (restId) => {
     const apiUrl = `${API_URL}/api/menu/${restId}`;
     const data = await fetch(apiUrl);
     if (!data.ok) {
-      throw new Error(`Failed to fetch menu of the rest with id ${restId}`);
+      throw new Error(`Failed to fetch menu of the rest with ID ${restId}`);
     }
     const menuData = await data.json();
     return menuData;
   } catch (error) {
-    console.error(`Error fetching restaurant with path ${path}:`, error);
+    console.error(`Error fetching menu from rest ID ${id}:`, error);
     throw error;
   }
 };
